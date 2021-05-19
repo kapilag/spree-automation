@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Spree Regression Suite" verbose="1" >
+    <parameter name="email"  value="mamta.siyak@thoughtworks.com"/>
+    <test name="Login Scenarios" >
+        <packages>
+            <package name="login"/>
+        </packages>
+    </test>
+</suite>

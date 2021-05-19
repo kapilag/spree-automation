@@ -1,5 +1,6 @@
 package Search;
 
+import constants.BaseTest;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,20 +10,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 
-public class TestSearch {
-    WebDriver driver;
-    @AfterClass
-    public void teardown(){
-        driver.quit();
-    }
+public class TestSearch extends BaseTest {
+
+
     @Test
     public void searchItemAndAddToCart() throws InterruptedException {
         //one test case for search for element and add it to cart
-        System.setProperty("webdriver.chrome.driver", "/Users/mamta.siyak/Downloads/chromedriver");
-        driver = new ChromeDriver();
-        driver.get("https://spree-vapasi.herokuapp.com/");
-        driver.manage().window().maximize();
-        Thread.sleep(2000);
         WebElement login = driver.findElement(By.id("link-to-login"));
         login.click();
         WebDriverWait wait = new WebDriverWait(driver, 10);
